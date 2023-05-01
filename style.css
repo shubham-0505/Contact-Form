@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box; 
+    font-family:"Poppins";
+}
+body{
+    background-image: url(./jess-bailey-q10VITrVYUM-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    background-color: white;
+    height:30rem;
+    width:25rem;
+    border:none;
+    border-radius:0.5rem;
+    margin:auto;
+}
+h2{
+    color:black;
+    font-weight:bold;
+    text-align: center;
+    padding:0.8rem 4rem;
+}
+label{
+    display:block;
+    text-align: left;
+}
+.inputs{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:1.8rem; 
+}
+.inputs input{
+    padding:0.5rem 3rem;
+    text-align:left;
+    /* text-transform:uppercase; */
+    border:1px solid black;
+    border-radius: 0.5rem;
+}
+button{
+    color:white;
+    padding:0.6rem 1.8rem;
+    border:1px solid black;
+    border-radius:0.5rem;
+    text-transform: uppercase;
+    background-color: black;
+    font-size:0.9rem;
+    font-weight:bold;
+    /* margin-top:2rem; */
+    cursor:pointer;
+    transition:0.4s;
+}
+button:hover{
+    color:black;
+    background-color: white;
+    border:2px solid black;
+}
+

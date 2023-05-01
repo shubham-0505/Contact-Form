@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Poppins&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Schedule a Meeting</h2>
+        <form>
+        <div class="inputs">
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="emailid" id="emailid" placeholder="Email" required>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Mobile Number" required>
+            <input type="text" name="title" id="title" placeholder="Meeting Title" required>
+            <input type="text" name="details" id="details" placeholder="Meeting Details" required>
+
+            <!-- <input type="date" name="date" id="date" placeholder="Date" required> -->
+            <button type="submit">Schedule</button>
+        </div>
+        </form>
+    </div>
+<script>
+    const emailInput = document.getElementById('emailid');
+    emailInput.addEventListener('input', function(validate){
+        if(emailInput.validity.typeMismatch){
+            emailInput.setCustomValidity('Please enter a valid email address');
+        } else{
+            emailInput.setCustomValidity('');
+        }
+    });
+
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input',function(validate){
+        if(phoneInput.validity.patternMismatch){
+            phoneInput.setCustomValidity('Please enter a 10-digit phone number');
+        }else{
+            phoneInput.setCustomValidity('');
+        }
+    })
+</script>
+</body>
+</html>
